@@ -2,7 +2,7 @@
     const formulario = document.querySelector('#formulario')
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
-        let advertencia = false;
+        let advertencia = [];
  
 
         let numberCard = document.querySelector("#numberCard")
@@ -20,84 +20,86 @@
 
 if(numberCard.value =="" || numberCard.value.length !==13){ 
     numberCard.classList.add("error") 
-    advertencia=false
+    advertencia.push(false)
 }
 else{
     numberCard.classList.remove('error')
     numberCard.classList.add("goodinput") 
-    advertencia=true
+   
   
 }
 if(cvc.value =="" || cvc.value.length !==3){ 
     cvc.classList.add("error") 
-    advertencia=false}
+    advertencia.push(false)}
 else{
     cvc.classList.remove('error')
     cvc.classList.add("goodinput")
-     advertencia=true
+    
     
 }
 if(cantidad.value ==""){ 
     cantidad.classList.add("error") 
-     advertencia=false}
+     advertencia.push(false)}
 else{
     cantidad.classList.remove('error')
      cantidad.classList.add("goodinput") 
-     advertencia=true
+    
 
 }
 if(nombre.value ==""){ 
     nombre.classList.add("error")
-     advertencia=false
+     advertencia.push(false)
 }
 else{
     nombre.classList.remove('error')
     nombre.classList.add("goodinput") 
-      advertencia=true
+     
 
 }
 if(apellido.value ==""){ 
     apellido.classList.add("error") 
-     advertencia=false}
+     advertencia.push(false)}
 else{
     apellido.classList.remove('error')
     apellido.classList.add("goodinput") 
-      advertencia=true
+     
 
 }
 if(ciudad.value ==""){ 
     ciudad.classList.add("error") 
-     advertencia=false}
+     advertencia.push(false)}
 else{
     ciudad.classList.remove('error')
      ciudad.classList.add("goodinput")
-      advertencia=true
+     
 
 }
 if(Listciudad.value =="Seleccione Pais"){ 
     Listciudad.classList.add("error") 
-     advertencia=false}
+     advertencia.push(false)}
 else{
     Listciudad.classList.remove('error')
      Listciudad.classList.add("goodinput")
-      advertencia=true
+     
 
 }
 if(codigoPostal.value ==""){ 
     codigoPostal.classList.add("error") 
-     advertencia=false}
+     advertencia.push(false)}
 else{
     codigoPostal.classList.remove('error')
      codigoPostal.classList.add("goodinput") 
-      advertencia=true
+     
 
 }
-if(advertencia!=false)
-{good.style.display="inline"
-error.style.display="none"
+if(advertencia.length>0){
+error.style.display="inline"
+good.style.display="none"
+
   }
-else{ error.style.display="inline"
-good.style.display="none"}
+else{
+good.style.display="inline"
+error.style.display="none"}
 console.log(advertencia)
     })
     
