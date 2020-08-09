@@ -32,13 +32,14 @@
                     <label class="mb-0 col-4" for="number-card">Cantidad</label>
                 </div>
                 <div class="from-row d-flex">
-                    <input class="col-4 form-control" id="numberCard" name="numberCard" placeholder="xxxx xxxx xxxx xxxx" >
+                    <input class="col-4 form-control" id="numberCard" name="numberCard" type="tel" inputmode="numeric" pattern="[0-9\s]{13}" 
+                    autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"  title="Ingre un numero de tarjeta valido" >
                
                     <input class="col-2 mr-4 ml-4 form-control" id="cvc" name="cvc" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" 
-                    autocomplete="cvc-number" maxlength="3" placeholder="000">
+                    autocomplete="cvc-number" maxlength="3" placeholder="000"  title="Ingrese codigo CVC">
                
                     <input class="col-4 form-control" id="cantidad" name="cantidad" type="tel" inputmode="numeric" pattern="[0-9]+" 
-                    autocomplete="cantidad" placeholder="$">
+                    autocomplete="cantidad" placeholder="$"  title="Ingrese monto a pagar">
                
                 </div>
                 <div class="from-row">
@@ -46,9 +47,9 @@
                     <label class="mb-0 col-5" for="apellidos">Apellidos</label>
                 </div>
                 <div class="from-row d-flex">
-                    <input class="col-5 mr-2 form-control" id="nombre" name="nombre" type="text" placeholder="Nombre" pattern="[a-z|A-Z]" >
+                    <input class="col-5 mr-2 form-control" id="nombre" name="nombre"type="text" placeholder="Nombre" pattern="[a-z|A-Z]"  title="Ingrese nombre del titular" >
                 
-                    <input class="col-5 form-control" id="apellido" name="apellido" type="text" placeholder="Apellidos" pattern="[a-z|A-Z]">
+                    <input class="col-5 form-control" id="apellido" name="apellido" type="text" placeholder="Nombre" pattern="[a-z|A-Z]"  title="Ingrese apellido del titular">
                 
                 </div>
                 <div class="from-row">
@@ -57,8 +58,8 @@
                     <label class="col-2 mb-0" for="codigo-postal">Codigo Postal</label>
                 </div>
                 <div class="d-flex">
-                    <input class="col-3 form-control" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" pattern="[a-z|A-Z]">
-                    <select value="" class="form-control col-3 mr-3 ml-3 " id="Listciudad" name="Listciudad" >
+                    <input class="col-3 form-control" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" pattern="[a-z|A-Z]"  title="Ingrese ciudad">
+                    <select value="" class="form-control col-3 mr-3 ml-3 " id="Listciudad" name="Listciudad" title="Seleccione una opcion" >
                          <option selected>Seleccione Pais</option>
                         <option>Venezuela</option>
                         <option>Espana</option>
@@ -75,13 +76,13 @@
                 <div class="from-row d-flex">
                     <div class="form-check form-check-inline col-4 offset-1 ">
                         
-                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta1" value="option1" title="SELECCION OPCION DE PAGO" checked>
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta1" value="option1"  checked>
                         <label class="form-check-label" for="tarjeta1"><i class="fa fa-cc-visa" aria-hidden="true"></i></label>
                         
-                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta2" value="option1" title="SELECCION OPCION DE PAGO">
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta2" value="option1" >
                         <label class="form-check-label" for="tarjeta2"><i class="fa fa-cc-diners-club" aria-hidden="true"></i></label>
                         
-                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta3" value="option1" title="SELECCION OPCION DE PAGO">
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta3" value="option1" >
                         <label class="form-check-label" for="tarjeta3"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></label>
                     </div>  
                
