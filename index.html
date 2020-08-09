@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/1687bfa95b.js"></script>
+    <link rel="stylesheet" href="styless.css">
+    <title>formulariot</title>
+   
+</head>
+<body>
+
+<div class="container border rounded mt-3 ">
+                <div class="bg-light border-bottom row" >
+                    <h3 class="col-12">Formulario de pago</h3>   
+                </div>
+                
+            <div class="row px-3 py-3 d-flex" >
+                <div class="col-12 rounded pt-2 error" style="display: none" id="error">
+                    <p class="pt-1" ><strong>Error al rellenar campos</strong> </p>
+                </div>
+                <div class="col-12 rounded pt-2 error" style="display: none" id="good">
+                    <p class="pt-1" ><strong>Enviado exitosamente</strong> </p>
+                </div>
+            </div>
+                <form action="" class="pl-4 mt-3" id="formulario" name="formulario" >
+                
+                <div class="from-row">
+                    <label class="mb-0 col-4" for="number-card">Tarjeta #</label>
+                    <label class="mb-0 col-2" for="number-card">CVC#</label>
+                    <label class="mb-0 col-4" for="number-card">Cantidad</label>
+                </div>
+                <div class="from-row d-flex">
+                    <input class="col-4 form-control" id="numberCard" name="numberCard" placeholder="xxxx xxxx xxxx xxxx" >
+               
+                    <input class="col-2 mr-4 ml-4 form-control" id="cvc" name="cvc" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" 
+                    autocomplete="cvc-number" maxlength="3" placeholder="000">
+               
+                    <input class="col-4 form-control" id="cantidad" name="cantidad" type="tel" inputmode="numeric" pattern="[0-9]+" 
+                    autocomplete="cantidad" placeholder="$">
+               
+                </div>
+                <div class="from-row">
+                    <label class="mb-0 col-5 mr-2" for="nombre">Nombre</label>
+                    <label class="mb-0 col-5" for="apellidos">Apellidos</label>
+                </div>
+                <div class="from-row d-flex">
+                    <input class="col-5 mr-2 form-control" id="nombre" name="nombre" type="text" placeholder="Nombre" pattern="[a-z|A-Z]" >
+                
+                    <input class="col-5 form-control" id="apellido" name="apellido" type="text" placeholder="Apellidos" pattern="[a-z|A-Z]">
+                
+                </div>
+                <div class="from-row">
+                    <label class="col-3 mb-0" for="ciudad">Ciudad</label>
+                    <label class="col-3 mb-0" for="pais">Pais</label>
+                    <label class="col-2 mb-0" for="codigo-postal">Codigo Postal</label>
+                </div>
+                <div class="d-flex">
+                    <input class="col-3 form-control" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" pattern="[a-z|A-Z]">
+                    <select value="" class="form-control col-3 mr-3 ml-3 " id="Listciudad" name="Listciudad" >
+                         <option selected>Seleccione Pais</option>
+                        <option>Venezuela</option>
+                        <option>Espana</option>
+                        <option>Peru</option>
+                        <option>Bolivia</option>
+                    </select>
+                    <input class="col-2 form-control" id="codigoPostal" name="codigoPostal" type="tel" inputmode="numeric" pattern="[0-9]{5}"
+                           maxlength="5" autocomplete="cc-number" placeholder="00000" >
+                </div>
+                <div class="from-row">
+                    <label class="mb-0 col-5" for="select-card">Seleccione tarjeta</label>
+                    <label class="mb-0 col-4" for="comentarios">Comentarios</label>
+                </div>
+                <div class="from-row d-flex">
+                    <div class="form-check form-check-inline col-4 offset-1 ">
+                        
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta1" value="option1" title="SELECCION OPCION DE PAGO" checked>
+                        <label class="form-check-label" for="tarjeta1"><i class="fa fa-cc-visa" aria-hidden="true"></i></label>
+                        
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta2" value="option1" title="SELECCION OPCION DE PAGO">
+                        <label class="form-check-label" for="tarjeta2"><i class="fa fa-cc-diners-club" aria-hidden="true"></i></label>
+                        
+                        <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta3" value="option1" title="SELECCION OPCION DE PAGO">
+                        <label class="form-check-label" for="tarjeta3"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></label>
+                    </div>  
+               
+                    <textarea class="col-6 form-control" id="mensaje" type="text" placeholder="Escriba aqui...."> </textarea>
+                </div>
+                <div class="row m-2">
+                <div class="col-6 offset-4 d-flex justify-content-end  ">
+                    <button type="reset" class="btn-sm btn-secondary ml-2 ">Borrar</button>
+                    <button type="submit" value="send" class="btn-sm btn-primary ml-2 ">Enviar</button>
+                </div>
+                </div>
+            </form>
+            </div>
+<script src="form.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>
+
+            

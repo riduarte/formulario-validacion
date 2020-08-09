@@ -1,0 +1,17 @@
+
+
+.error {
+    background-color: #FEDFDF ;
+    border: solid 1px #FFBEBE;
+    color: #990C0C;
+}
+
+#good {
+    background-color: #C0F4BD ;
+    border: solid 1px #78EC62;
+    color: #22AF1B;
+}
+
+.goodinput{
+    border: solid 1px #78EC62;
+}
